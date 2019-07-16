@@ -39,6 +39,7 @@ $ composer require api
 On peut consulter l'API à l'adresse https://localhost:8000/api . Pour l'instant, notre API est complètement vide et nous voulons la charger avec des données existantes que l'on récupère depuis des fichiers `.csv`.
 
 ### 3. Créer les entités en utilisant Doctrine
+#### 3.1 Installation des composants et configuration de la BDD
 Installation des composants nécessaires grâce à composer:
 ```
 $ composer require migrations
@@ -50,10 +51,14 @@ Il faut ensuite modifier le fichier `.env` qui se trouve à la racine du projet 
 La nouvelle valeur de `DATABASE_URL` est par exemple :
 `DATABASE_URL=mysql://root:@127.0.0.1:3306/organisations_datagouv` pour les valeurs `db_user="root"` et `db_pwd=""`.
 
+#### 3.2 Création de la base de données et fichiers csv
+
 On peut maintenant créer la base de données :
 ```
 $ php bin/console doctrine:database:create
 ```
+Pour pouvoir utiliser nos fichiers `.csv` comme ressources, on les récupèrent sur [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/organisations-de-data-gouv-fr-reliees-a-wikidata/#_) et on les place dans `/public/data/ `.
+
 Il faut ensuite générer des entités, c'est à dire des tables, pour la base de données. Il suffit simplement de lancer la commande suivante et suivre les instructions :
 ```
 $ php bin/console make:entity
