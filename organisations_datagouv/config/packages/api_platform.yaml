@@ -1,3 +1,5 @@
 api_platform:
+    title: 'Organisations de data.gouv.fr reliées à Wikidata'
+    description: 'Ce jeu de données donne la liste des organisations de data.gouv.fr reliées à la base Wikidata.org. Les données sont en cours de consolidation et doivent être utilisées avec précaution.'
     mapping:
         paths: ['%kernel.project_dir%/src/Entity']
