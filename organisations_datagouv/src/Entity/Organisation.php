@@ -4,11 +4,13 @@ namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ApiResource(
  *     collectionOperations={"get"},
- *     itemOperations={"get"}
+ *     itemOperations={"get"},
+ *     normalizationContext={"groups"={"read"}}
  * )
  * @ORM\Entity(repositoryClass="App\Repository\OrganisationRepository")
  */
@@ -22,17 +24,26 @@ class Organisation
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+    * L'identifiant data.gouv de l'organisation
+    *
+    * @ORM\Column(type="string", length=255)
+    * @Groups({"read"})
      */
     private $datagouvid;
 
     /**
+     * L'identifiant wikidata de l'organisation
+     *
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups({"read"})
      */
     private $item;
 
     /**
+     * Le label francophone de Wikidata de l'organisation
+     *
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups({"read"})
      */
     private $itemLabel;
 
