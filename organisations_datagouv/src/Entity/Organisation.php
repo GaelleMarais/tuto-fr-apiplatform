@@ -5,6 +5,9 @@ namespace App\Entity;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
+use ApiPlatform\Core\Annotation\ApiFilter;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
+
 
 /**
  * @ApiResource(
@@ -12,6 +15,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *     itemOperations={"get"},
  *     normalizationContext={"groups"={"read"}}
  * )
+ * @ApiFilter(SearchFilter::class, properties={"datagouvid": "partial", "item":"partial", "itemLabel":"partial"})
  * @ORM\Entity(repositoryClass="App\Repository\OrganisationRepository")
  */
 class Organisation
