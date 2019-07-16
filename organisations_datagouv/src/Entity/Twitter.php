@@ -4,11 +4,13 @@ namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ApiResource(
  *     collectionOperations={"get"},
- *     itemOperations={"get"}
+ *     itemOperations={"get"},
+ *     normalizationContext={"groups"={"read"}}
  * )
  * @ORM\Entity(repositoryClass="App\Repository\TwitterRepository")
  */
@@ -22,12 +24,18 @@ class Twitter
     private $id;
 
     /**
+     * L'identifiant data.gouv de l'organisation
+     *
      * @ORM\Column(type="string", length=255)
+     * @Groups({"read"})
      */
     private $datagouvid;
 
     /**
+     * L'identifiant twitter de l'organisation
+     *
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups({"read"})
      */
     private $twitterUsername;
 
