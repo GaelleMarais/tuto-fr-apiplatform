@@ -230,3 +230,16 @@ use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 Dans les properties de mon `SearchFilter`, j'ajoute les champs qui permettent d'effectuer une recherche. L'attribut `partial` indique que je souhaite que le mot recherché aparaisse dans le champs n'importe où. On peut aussi mettre `exact`, `start`, `end` ou `word_start` pour affiner la recherche. <br/>
 Il existe de nombreux filtres fournis par API Platform pour faire des recherches autrement que par texte : `DateFilter` pour faire des recherches sur des champs `DateTime`, `BooleanFilter` pour des champs booléens, `RangeFilter` pour des entiers, etc. <br/>
 On peut retrouver la liste de tous les filtres disponibles sur [la documentation d'API Platform](https://api-platform.com/docs/core/filters/).
+
+### Licence
+
+2018-2019 Direction interministérielle du numérique et du système
+d'information et de communication de l'État. <br/>
+
+2018-2019 Les contributeurs accessibles via l'historique du dépôt. <br/>
+
+Les contenus accessibles dans ce dépôt sont placés sous [Licence
+Ouverte 2.0](LO.md).  Vous êtes libre de réutiliser les contenus de ce dépôt
+sous les conditions précisées dans cette licence. </br>
+
+Ce document est écrit par Gaëlle Marais à Etalab.
