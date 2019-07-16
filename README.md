@@ -71,8 +71,8 @@ $ php bin/console doctrine:migrations:migrate
 ```
 
 ### 4. Peupler la base de données à partir de données .csv
-Pour peupler la BDD à partir des .csv, j'ai créé deux script php `ImportDataCommand.php` et `EmptyDataBaseCommand.php`.<br/>
-//TODO lien vers les scripts <br/>
+Pour peupler la BDD à partir des .csv, j'ai créé deux script php [`ImportDataCommand.php`](organisations_datagouv/src/Command/ImportDataCommand.php) et [`EmptyDataBaseCommand.php`](organisations_datagouv/src/Command/EmptyDataBaseCommand.php) .<br/>
+
 Ces scripts doivent être placés dans `/src/Command/`  pour pouvoir les éxécuter avec la commande :
 ```
 $ php bin/console import:csv
