@@ -194,18 +194,18 @@ use Symfony\Component\Serializer\Annotation\Groups;
 ....
 * @ApiResource(
  *     ....
- *     normalizationContext={"groups"={"organisation:read"}}
+ *     normalizationContext={"groups"={"read"}}
 *      ....
  * )
  ```
-Maintenant, il faut ajouter les propriétés de l'entité dans le groupe que l'on vient de créer. Pour cela, au dessus de la propriété on ajoute une annotation @Groups :
+Maintenant, il faut ajouter les propriétés de l'entité dans le groupe que l'on vient de créer. Pour cela, au dessus de la propriété on ajoute une annotation `@Groups` :
 ```php
 
 /**
  * L'identifiant data.gouv de l'organisation
  *
  * @ORM\Column(type="string", length=255)
- * @Groups({"organisation:read"})
+ * @Groups({"read"})
  */
 private $datagouvid;
 
