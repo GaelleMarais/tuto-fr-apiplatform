@@ -63,6 +63,11 @@ Il faut ensuite générer des entités, c'est à dire des tables, pour la base d
 ```
 $ php bin/console make:entity
 ```
+
+Un petit aperçu de la création d'entité en utilisant Doctrine :
+![make-entity-screenshot](https://user-images.githubusercontent.com/14167172/62034704-c8296680-b1ee-11e9-89af-c2bfb4879f78.png)
+
+
 J'ai crée une entité pour chaque fichier `.csv`, j'ai donc les entités `Organisation`, `SirenDatagouv` et `Twitter`. Chaque entité contient un champ pour chaque colonne du fichier `.csv`.
 Quand toutes les entités sont prêtes, on peut générer la migration :
 ```
@@ -183,6 +188,8 @@ En en-tête de la classe, on peut ajouter des paramètres supplémentaires à l'
 * )
  ```
 Les opérations de collections s'effectue sur une liste de ressource, tandis que les opérations d'items s'effectue sur une seule ressource en particulier. Ici, je veux seulement les opérations GET pour que l'utilisateur puisse consulter les données sans les modifier, et ce pour chacune de mes trois entités.
+Voilà le résultat :
+![operation-apiplatform-screenshot](https://user-images.githubusercontent.com/14167172/62034676-bc3da480-b1ee-11e9-8e12-739cbeac63e3.png)
 
 #### 5.3 Groupes de sérialisation
 Les groupes de sérialisation nous permette de spécifier la liste des champs que l'on veut renvoyer dans les requetes JSON. Dans notre cas, il s'agit seulement de requêtes de lecture de données mais on peut créer autant de groupe que l'on veut et les associer aux différentes opérations. <br/>
@@ -215,6 +222,9 @@ En raffraichissant la page, notre API contient maintenant des modèles avec les 
 
 On peut également écrire une description dans l'en-tête des attributs qui va s'afficher sur notre API.
 
+Voilà ce que ça donne :
+![models-apiplatform-screenshot](https://user-images.githubusercontent.com/14167172/62034696-c3fd4900-b1ee-11e9-84a5-115b85f4c3d9.png)
+
 
 #### 5.4 Filtres de recherche
 On souaite permettre à l'utilisateur de notre API de faires des recherches sur des champs spécifiques. Pour cela, on va ajouter une nouvelle annotation à l'en-tête de notre entité `Organisation ` :
@@ -235,6 +245,9 @@ use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 Dans les properties de mon `SearchFilter`, j'ajoute les champs qui permettent d'effectuer une recherche. L'attribut `partial` indique que je souhaite que le mot recherché aparaisse dans le champs n'importe où. On peut aussi mettre `exact`, `start`, `end` ou `word_start` pour affiner la recherche. <br/>
 Il existe de nombreux filtres fournis par API Platform pour faire des recherches autrement que par texte : `DateFilter` pour faire des recherches sur des champs `DateTime`, `BooleanFilter` pour des champs booléens, `RangeFilter` pour des entiers, etc. <br/>
 On peut retrouver la liste de tous les filtres disponibles sur [la documentation d'API Platform](https://api-platform.com/docs/core/filters/).
+On peut dorénavant tester les opérations pour récuperer des données et on obtient les requetes au format .json. 
+
+![json-apiplatform-screenshot](https://user-images.githubusercontent.com/14167172/62034711-cbbced80-b1ee-11e9-8dbc-39cb59250167.png)
 
 ### Licence
 
