@@ -251,10 +251,10 @@ On peut dorénavant tester les opérations pour récuperer des données et on ob
 
 ### Licence
 
-2018-2019 Direction interministérielle du numérique et du système
+2019 Direction interministérielle du numérique et du système
 d'information et de communication de l'État. <br/>
 
-2018-2019 Les contributeurs accessibles via l'historique du dépôt. <br/>
+2019 Les contributeurs accessibles via l'historique du dépôt. <br/>
 
 Les contenus accessibles dans ce dépôt sont placés sous [Licence
 Ouverte 2.0](LO.md).  Vous êtes libre de réutiliser les contenus de ce dépôt
