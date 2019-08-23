@@ -4,6 +4,10 @@
 ### API Platform
 [API Platform](https://api-platform.com/) est une bibliothèque puissante et facile à utiliser et pour créer des API REST pilotées par hypermédia. Elle peut être utilisée seule mais il est recommandé de l’utiliser avec le framework [Symfony](https://symfony.com/). Nous allons donc créer un projet Symfony et installer API Platform comme un bundle dans notre application web. <br/>
 Nous allons créer une API pour consulter [les données des organisations de data.gouv.fr reliées à Wikidata](https://www.data.gouv.fr/fr/datasets/organisations-de-data-gouv-fr-reliees-a-wikidata/#_).
+
+[Démo de l'API construite avec API Platform dans ce tutoriel.](http://demo-api-platform.eig-forever.org/api)
+
+
 ### 1. Installations prérequises
 #### PHP 7.1 ou plus récent
 [Documentation officielle en français](https://www.php.net/manual/fr/install.php)
@@ -248,7 +252,7 @@ use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 Dans les properties de mon `SearchFilter`, j'ajoute les champs qui permettent d'effectuer une recherche. L'attribut `partial` indique que je souhaite que le mot recherché apparaisse dans le champ n'importe où. On peut aussi mettre `exact`, `start`, `end` ou `word_start` pour affiner la recherche. <br/>
 Il existe de nombreux filtres fournis par API Platform pour faire des recherches autrement que par texte : `DateFilter` pour faire des recherches sur des champs `DateTime`, `BooleanFilter` pour des champs booléens, `RangeFilter` pour des entiers, etc. <br/>
 On peut retrouver la liste de tous les filtres disponibles sur [la documentation d'API Platform](https://api-platform.com/docs/core/filters/).
-On peut dorénavant tester les opérations pour récupérer des données et on obtient les requêtes au format .json. 
+On peut dorénavant tester les opérations pour récupérer des données et on obtient les requêtes au format .json.
 
 ![json-apiplatform-screenshot](https://user-images.githubusercontent.com/14167172/62034711-cbbced80-b1ee-11e9-8dbc-39cb59250167.png)
 
