@@ -256,6 +256,14 @@ On peut dorénavant tester les opérations pour récupérer des données et on o
 
 ![json-apiplatform-screenshot](https://user-images.githubusercontent.com/14167172/62034711-cbbced80-b1ee-11e9-8dbc-39cb59250167.png)
 
+### Conclusion
+
+API Platform est un outil très complet et qui permet de créer des APIs rapidement, mais il est un peu compliqué à prendre en main pour des personnes qui n'ont aucune connaissance de Symfony ou de PHP.
+
+Selon les besoins, il peut être plus judicieux de s'intéresser à [Datasette](https://github.com/GaelleMarais/tuto-fr-datasette) qui est plus facile à utiliser mais qui fournit une API de consultation où les données ne peuvent pas être modifiées par les utilisateurs.
+
+Enfin, si l'on ne dispose pas de serveurs pour héberger notre API, on peut utiliser [Netlify](https://github.com/GaelleMarais/tuto-fr-api-netlify) qui permet d'héberger gratuitement des applications web.
+
 ### Licence
 
 2019 Direction interministérielle du numérique et du système
